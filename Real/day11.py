@@ -1,3 +1,6 @@
+#day 11: Connected LLM to FastAPI route, api key secured in gitignored environment variable, the agent
+# has session memory too.
+
 from fastapi import FastAPI
 from openai import OpenAI
 from pydantic import BaseModel
