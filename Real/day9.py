@@ -1,9 +1,12 @@
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="OPENAI_API_KEY"
+    api_key=os.getenv("OPENROUTER_API_KEY")
 )
 # Introduction to templates---------------------------
 # template = "My name is {name} and I'm {age} years old."

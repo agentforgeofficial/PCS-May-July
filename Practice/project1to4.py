@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import httpx
-import requests
 app=FastAPI()
 class CryptoCheck(BaseModel):
     coin_ticker : str
