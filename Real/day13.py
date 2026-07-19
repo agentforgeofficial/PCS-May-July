@@ -1,3 +1,6 @@
+#day 13: Implemented a dynamic routing agent using an LLM classifier to evaluate user intent, 
+# executing specific python backend functions based on conditional decision logic.
+
 from pydantic import BaseModel
 from fastapi import FastAPI
 from openai import OpenAI
@@ -56,7 +59,6 @@ async def routed_chat(request: RoutedAgent):
     else:
         return {
             "route_executed" : "dynamic_general_chat",
-            "output" : "This is fallback chatter due to incomplete function.",
-            "int" : intent
+            "output" : "This is fallback chatter due to incomplete function."
         }
         
